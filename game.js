@@ -38,7 +38,7 @@ $(document).ready(function(){
 	$('.jogada').click(function(){
 
 		var id_campo = this.id;
-		//elimina as funcioes click() não entendi bem!
+		//elimina as funcioes click() não entendi bem!wh
 		$('#'+id_campo).off();
 		jogada(id_campo);
 
