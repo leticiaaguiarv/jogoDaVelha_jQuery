@@ -69,23 +69,18 @@ $(document).ready(function(){
 	}
 
 	function verifica_combinacao(){
-		// h
+		// horizontal
 		var pontos = 0;
-		for (var i = 0; i <= 3; i++) {
-			pontos += matriz_game['a'][i];
-		}
-		ganhador(pontos);
 
-		pontos = 0;
-		for (var i = 0; i <= 3; i++) {
-			pontos += matriz_game['b'][i];
-		}
+		pontos = matriz_game['a'][1] + matriz_game['a'][2] + matriz_game['a'][3];
 		ganhador(pontos);
-
+		
 		pontos = 0;
-		for (var i = 0; i <= 3; i++) {
-			pontos += matriz_game['c'][i];
-		}
+		pontos = matriz_game['b'][1] + matriz_game['b'][2] + matriz_game['b'][3];
+		ganhador(pontos);
+		
+		pontos = 0;
+		pontos = matriz_game['c'][1] + matriz_game['c'][2] + matriz_game['c'][3];
 		ganhador(pontos);
 		
 		//vertical
