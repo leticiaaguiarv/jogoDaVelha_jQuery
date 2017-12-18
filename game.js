@@ -57,15 +57,21 @@ $(document).ready(function(){
 			ponto = 1;
 		}
 
-		rodada++;
-
 		$('#'+id).css('background-image', icone);
 
 		var linha_coluna = id.split('-');
 
 		matriz_game[linha_coluna[0]][linha_coluna[1]] = ponto;
-
+		
 		verifica_combinacao();
+		fim_de_jogo();
+		rodada++;
+	}
+
+	function fim_de_jogo(){
+		if(rodada>=9){
+			alert( "Fim de jogo! Nenhum vencedor!");
+		}		
 	}
 
 	function verifica_combinacao(){
